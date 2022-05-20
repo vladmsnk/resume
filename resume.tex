@@ -1,0 +1,203 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{20pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Vladislav Moiseenkov} & Email : \href{mailto:vyumoiseenkov@gmail.com}{vyumoiseenkov@gmail.com}\\
+  Github: \href{https://github.com/vladmsnk}{vladmsnk} & Mobile : +7\hspace{0.5ex}xxx\hspace{0.5ex}xxx\hspace{0.5ex}xx\hspace{0.5ex}xx \\
+\end{tabular*}
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C++, C, Java, Python, Bash}
+   }\vspace{-7pt}
+   \item{
+     \textbf{Technologies}{: SQL, Git, \LaTeX, Docker, Linux, Liquibase, Spring. }
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Knowledge}{: Algorithms, Data Structures, Concurrent Computing, Operating Systems, English B2}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Soft skills}{: Self-confidence, Communication, Emotional Intelligence, Responsibility}
+   }
+   
+ \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+       {Higher School of Economics}{Moscow, Russia}{Bachelor of Informatics and Computer engineering}{Sept. 2020 - June 2024 (Present)}
+      %\begin{comment}
+	 \resumeItemListStart
+        \resumeItem{Paper}
+          {Model for recognizing emotions in the human voice}
+      \resumeItemListEnd
+      %\end{comment}
+    \resumeSubheading
+      {42 School}{Moscow, Russia}{Low-Level Programming}{July. 2021 - Sept. 2025 (Present)}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {Higher School of Economics}{Moscow, Russia}
+      {\makecell[l]{Java SWE, project team \\ Researcher in Concurrent programming}}{\makecell[r]{Oct. 2021 - Dec. 2021 \\ Feb. 2022 - Present}}
+      {\skill{Java} \skill{Spring}\skill{C++} \skill{Operating Systems} \skill{Concurrent Programming} \skill{GPU architecture}}
+      \resumeDesc{\begin{itemize}
+          \item Developing RESTful services, unit testing, writing documentation.
+          \item Research on acceleration methods in parallel computing,  Parallelization of state machines
+      \end{itemize}}
+   
+    
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+  
+      \resumeProjSubheading
+      {\href{https://github.com/vladmsnk/emotion-Recognition}{Model for recognizing emotions in the human voice} [First year paper]}{Moscow, Russia}
+      {\skill{Python} \skill{Machine Learning} \skill{Keras}}
+          \resumeDesc{Wrote a model distinguishing human emotions in their voice using Python Keras. Was able to scrutinise a difficult theme in Machine Learning using advanced Math topics such as FFT, SVD, LU decomposition. }
+  
+    \resumeProjSubheading
+      {\href{https://github.com/vladmsnk/Registration-API}{Registration API}}{Moscow, Russia}
+      {\skill{Java} \skill{Spring boot} \skill{Postman} \skill{Git} \skill{PostgreSQL} \skill{JUnit}}
+          \resumeDesc{Wrote Registration and Authorisation service using Java Spring with an ability to confirm an account through email. Service was tested with Mockito framework. Learned Spring framework for a short period of time}
+    \resumeProjSubheading
+      {\href{https://github.com/vladmsnk/fractal-simulator}{42 School projects}}{Moscow, Russia}
+      {\skill{C} \skill{Git} \skill{Linux} \skill{Concurrency} \skill{Operating Systems} \skill{Task Scheduling} }
+          \resumeDesc{Wrote many C Low-level projects: Simulating pipe command, implementing own printf, fractal simulator, philosophers problem, etc. Improved skills in writing clean code and debugging. Got serious  understanding how UNIX systems work}      
+
+  \resumeSubHeadingListEnd
+
+
+
+
+%-------------------------------------------
+\end{document}
